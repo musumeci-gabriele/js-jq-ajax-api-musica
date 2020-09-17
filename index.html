@@ -2,10 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <title>ex-dischi-musicali</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <title>js-jq-ajax-api-musica</title>
+
   </head>
 
   <body>
@@ -18,23 +20,28 @@
     Bonus:
     Creare una select con i seguenti generi: pop, rock, metal e jazz.
     In base a cosa scegliamo nella select vedremo solo i corrispondenti cd. -->
+    <header>
+        <div class="container">
+            <img src="logo.png" alt="logo" />
+        </div>
+    </header>
 
     <!-- LISTA ALBUM -->
-    <ul class="album-list">
+    <div class="album-list">
 
-    </ul>
+    </div>
     <!-- LISTA ALBUM -->
-    
+
     <!-- TEMPLATE DI STAMPA INFO ALBUM -->
-    <script id="album-template" type="text/x-handlebars-template">
+    <!-- INFO DATI DAL SERVER DOPO IL LOG DI VERIFICA INTERNA data.response -->
+    <script id="album-template" class="cds-container container" type="text/x-handlebars-template">
 
-      <li class="cd">
-        <img src="{{poster}}" alt="poster">
-        <h2>{{author}}</h2>
-        <span>{{title}}</span>
-        <h4>{{year}}</h4>
-        <h6>{{genre}}</h6>
-      </li>
+      <div class="cd">
+        <img class="img-poster" src="{{poster}}" alt="poster">
+        <h3>{{title}}</h3>
+        <span class="author">{{author}}</span>
+        <span>{{year}}</span>
+      </div>
 
     </script>
     <!-- TEMPLATE DI STAMPA INFO ALBUM -->
