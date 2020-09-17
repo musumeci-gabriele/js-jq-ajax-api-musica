@@ -18,14 +18,18 @@ $(document).ready(function(){
     }
   );
 
+  // FUNZIONE LINK HANDLEBARS
   function printAlbum(returnToServer){
-    var source = document.getElementById("album-template").innerHTML;
+
+    var source = $("#album-template").html();
     var template = Handlebars.compile(source);
 
+    // CICLO DI STAMPA PER I SINGOLI DATI DI RITORNO DAL SERVER E INSERITI NEL TEMPLATE
     for (var i = 0; i < returnToServer.length; i++) {
       var album = returnToServer[i];
       var html = template(album);
 
+      // STAMPA DATI
       $(".album-list").append(html);
     }
   }
