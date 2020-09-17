@@ -2,14 +2,42 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>js-jq-ajax-api-musica</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <title>js-jq-ajax-api-musica</title>
   </head>
+
   <body>
+    <!-- Descrizione:
+    Facciamo una chiamata ajax all'api di boolean al seguente indirizzo.
+    https://flynn.boolean.careers/exercises/api/array/music
+    L'api ci restituirà decina di dischi musicali che dovremo stampare a schermo con Handlebars.
+    Concentratevi sulla parte JS per la grafica potrete utilizzare il layout che troverete al seguente link
+    https://bitbucket.org/booleancareers/ex-dischi-musicali-layout/downloads/
+    Bonus:
+    Creare una select con i seguenti generi: pop, rock, metal e jazz.
+    In base a cosa scegliamo nella select vedremo solo i corrispondenti cd. -->
 
+    <!-- LISTA ALBUM -->
+    <ul class="album-list">
 
+    </ul>
+    <!-- LISTA ALBUM -->
+    
+    <!-- TEMPLATE DI STAMPA INFO ALBUM -->
+    <script id="album-template" type="text/x-handlebars-template">
 
+      <li class="cd">
+        <img src="{{poster}}" alt="poster">
+        <h2>{{author}}</h2>
+        <span>{{title}}</span>
+        <h4>{{year}}</h4>
+        <h6>{{genre}}</h6>
+      </li>
+
+    </script>
+    <!-- TEMPLATE DI STAMPA INFO ALBUM -->
     <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>
