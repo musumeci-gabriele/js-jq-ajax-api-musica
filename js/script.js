@@ -34,8 +34,4 @@ $(document).ready(function(){
     }
   }
 
-
-
-
-
 });

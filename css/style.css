@@ -12,9 +12,11 @@ body {
 /* MIX */
 
 .container {
-    width: 1070px;
-    height: 100%;
-    margin: 0 auto;
+  width: 1070px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
 }
 
 header {
@@ -27,7 +29,11 @@ header img {
     height: 50px;
     margin-top: 10px;
 }
-
+header h2{
+  margin: 20px;
+  color: white;
+  background-color: inherit;
+}
 .cds-container {
     display: flex;
     justify-content: center;
@@ -35,7 +41,13 @@ header img {
     flex-wrap: wrap;
     padding: 100px 0;
 }
-
+.genere{
+  height: 30px;
+  width: 80px;
+  margin: auto 0;
+  border-radius: 10px;
+}
+/* RITORNO CAMPI DAL SERVER */
 .cd {
     display: flex;
     justify-content: flex-start;
@@ -63,11 +75,7 @@ header img {
 .cd span.author {
   font-size: 20px;
 }
-/* .cd span.year {
-    color: lightgrey;
-    background-color: inherit;
-} */
-
 .img-poster{
   width: 200px;
 }
+/* // RITORNO CAMPI DAL SERVER */
