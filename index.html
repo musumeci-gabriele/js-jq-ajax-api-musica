@@ -21,18 +21,17 @@
     Creare una select con i seguenti generi: pop, rock, metal e jazz.
     In base a cosa scegliamo nella select vedremo solo i corrispondenti cd. -->
     <header>
-        <div class="container">
-            <img src="logo.png" alt="logo">
-            <h2>Trova il tuo genere :</h2>
-            <select class="genere" name="genere">
-              <option value="tutti">Tutti</option>
-              <option value="rock">Rock</option>
-              <option value="jazz">Jazz</option>
-              <option value="punk">Punk</option>
-              <option value="pop">Pop</option>
-              <option value="classica">Classica</option>
-            </select>
-        </div>
+      <div class="container">
+          <img src="logo.png" alt="logo">
+          <h2>Trova il tuo genere :</h2>
+          <select id="music" class="genere" name="genere">
+            <option value="">All</option>
+            <option value="Rock">Rock</option>
+            <option value="Jazz">Jazz</option>
+            <option value="Pop">Pop</option>
+            <option value="Metal">Metal</option>
+          </select>
+      </div>
     </header>
 
     <!-- LISTA ALBUM -->
@@ -43,8 +42,8 @@
     <!-- TEMPLATE DI STAMPA INFO ALBUM -->
     <!-- INFO DATI DAL SERVER DOPO IL LOG DI VERIFICA INTERNA data.response -->
     <script id="album-template" type="text/x-handlebars-template">
-
-      <div class="cd">
+      <!-- aggiungo data-genere per richiamare il valore direttamente dalla call -->
+      <div class="cd" data-genere="{{genre}}">
         <img class="img-poster" src="{{poster}}" alt="poster">
         <h3>{{title}}</h3>
         <span class="author">{{author}}</span>

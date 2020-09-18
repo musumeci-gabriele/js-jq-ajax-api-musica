@@ -34,4 +34,25 @@ $(document).ready(function(){
     }
   }
 
+  // FUNZIONE RICERCA GENERE tramite CHANGE che si attiva quando cambia valore
+  $(".music").change(
+    function(){
+      if ($(".cds-container").children().lenght > 0) {
+        var valueSelect = $(this).val();
+
+        if (valueSelect == "") {
+          $(".cd").show();
+        }else{
+          $(".cd").hide();
+          $(".cd[data-genere='"+ valueSelect +"']").show();
+        }
+      }
+    }
+  );
+
+
+
+
+
+
 });
