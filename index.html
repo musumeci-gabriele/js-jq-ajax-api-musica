@@ -24,6 +24,7 @@
       <div class="container">
           <img src="logo.png" alt="logo">
           <h2>Trova il tuo genere :</h2>
+
           <select id="music" class="genere" name="genere">
             <option value="">All</option>
             <option value="Rock">Rock</option>
@@ -36,16 +37,18 @@
 
     <!-- LISTA ALBUM -->
     <div class="album-list cds-container container">
+      
     </div>
     <!-- LISTA ALBUM -->
 
     <!-- TEMPLATE DI STAMPA INFO ALBUM -->
     <!-- INFO DATI DAL SERVER DOPO IL LOG DI VERIFICA INTERNA data.response -->
     <script id="album-template" type="text/x-handlebars-template">
+
       <!-- aggiungo data-genere per richiamare il valore direttamente dalla call -->
       <div class="cd" data-genere="{{genre}}">
         <img class="img-poster" src="{{poster}}" alt="poster">
-        <h3>{{title}}</h3>
+        <h4>{{title}}</h4>
         <span class="author">{{author}}</span>
         <span>{{year}}</span>
       </div>
