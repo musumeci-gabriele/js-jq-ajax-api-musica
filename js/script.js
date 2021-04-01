@@ -48,27 +48,3 @@ function printAlbum(returnToServer){
     $(".album-list").append(html);
   }
 }
-
-
-
-
-// $(".genere").click(
-//     function() {
-//       var genreOption = $(this).val();
-//       if (genreOption != "All") {
-//         var cds = $(".cd").each(
-//           function() {
-//             var attribute = $(this).attr("data-genre");
-//             if (attribute != genreOption) {
-//               $(this).hide();
-//             } else {
-//               $(this).show();
-//             }
-//           }
-//         )
-//       } else {
-//         $(".cd").show();
-//       }
-    // });
-
-
